@@ -1,0 +1,60 @@
+﻿<Window x:Class="LogikOverlay.frmLogikOverlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogikOverlay"
+        mc:Ignorable="d"
+        Title="LogikOverlay"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        Width="250"
+        Height="250"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Border Background="#AA000000" Padding="8" CornerRadius="6">
+        <DockPanel>
+
+            <!-- Header -->
+            <TextBlock DockPanel.Dock="Top"
+                       Text="Scout Timers"
+                       Foreground="White"
+                       FontSize="18"
+                       Margin="0 0 0 8"/>
+
+            <!-- Tabs by SpawnType -->
+            <TabControl x:Name="MainTabControl" Background="Transparent" ItemsSource="{Binding Tabs}">
+                <!-- Tab Header -->
+                <TabControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Type}" />
+                    </DataTemplate>
+                </TabControl.ItemTemplate>
+
+                <!-- Tab Content -->
+                <TabControl.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <ItemsControl ItemsSource="{Binding Items}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Button Content="{Binding DisplayText}"
+                                                Command="{Binding StartCommand}"
+                                                Margin="0 0 0 6"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </DataTemplate>
+                </TabControl.ContentTemplate>
+            </TabControl>
+        </DockPanel>
+    </Border>
+</Window>

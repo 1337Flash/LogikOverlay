@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogikOverlay", "LogikOverlay\LogikOverlay.csproj", "{F89C477F-3FF9-4578-8167-F3B2CC1DD745}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F89C477F-3FF9-4578-8167-F3B2CC1DD745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89C477F-3FF9-4578-8167-F3B2CC1DD745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89C477F-3FF9-4578-8167-F3B2CC1DD745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89C477F-3FF9-4578-8167-F3B2CC1DD745}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F955116F-065D-4F36-9E59-4F4896499AB0}
+	EndGlobalSection
+EndGlobal
