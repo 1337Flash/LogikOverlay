@@ -10,8 +10,8 @@ namespace LogikOverlay
 {
     public enum SpawnType
     {
-        Ship,
-        Augment
+        Scouts,         //https://stfc.johnwsiskar.com/federation-romulan-klingon-scouts/
+        Augments
     }
     /// <summary>
     /// Interaction logic for LogikOverlay.xaml
@@ -31,11 +31,23 @@ namespace LogikOverlay
             LocationChanged += (_, __) => SaveWindowPosition();
             Closing += (_, __) => SaveWindowPosition();
 
-            // Example seeds (remove or change as needed)
-            VM.AddSpawnTimer("Eshaan", 30, SpawnType.Ship);
-            VM.AddSpawnTimer("Lycia", 30, SpawnType.Ship);
-            VM.AddSpawnTimer("Rogan", 30, SpawnType.Ship);
-            VM.AddSpawnTimer("Vemet", 30, SpawnType.Ship);
+            // Example Scouts (remove or change as needed)
+            VM.AddSpawnTimer("Eshaan", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Lycia", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Rogan", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Vemet", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Eshaan", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Lycia", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Rogan", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Vemet", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Eshaan", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Lycia", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Rogan", 30, SpawnType.Scouts);
+            VM.AddSpawnTimer("Vemet", 30, SpawnType.Scouts);
+
+            // Example Augments
+            VM.AddSpawnTimer("Augment System 1", 45, SpawnType.Augments);
+            VM.AddSpawnTimer("Augment System 2", 45, SpawnType.Augments);
 
             // One timer updates all items
             _uiTimer.Interval = TimeSpan.FromSeconds(1);
